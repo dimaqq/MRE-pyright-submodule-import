@@ -37,7 +37,7 @@ jobs:
           cat requirements.txt
 
       - name: Set up LXD
-        uses: canonical/setup-lxd@ce8decb3609c0a03c5abd5034d02a6c145e2076f
+        uses: canonical/setup-lxd@2aa6f7caf7d1484298a64192f7f63a6684e648a4
         with:
           channel: 5.0/stable
 
