@@ -3,6 +3,7 @@ from types import ModuleType
 
 # Note, `.main` import is required
 from . import main as _main
+print(_main)  # use the submodule for something private
 
 class _CallableMainModule(ModuleType):
     def __call__(self):
@@ -10,4 +11,4 @@ class _CallableMainModule(ModuleType):
 
 main = _CallableMainModule("ops.main", "some doc")
 
-__all__ = ["main", "_main"]
+__all__ = ["main"]
