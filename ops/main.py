@@ -1,5 +1,1 @@
-# Copyright 2019 Canonical Ltd.
-
-
-def main() -> int:
-    return 42
+# Empty, but file must exist to be importable

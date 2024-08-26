@@ -1,14 +1,13 @@
 # Copyright 2020 Canonical Ltd.
 from types import ModuleType
 
+# Note, `.main` import is required
 from . import main as _main
 
-# Support old and new style main calls at run time and for type checking
-# - ops.main.main()
-# - ops.main()
 class _CallableMainModule(ModuleType):
-    __call__ = main = staticmethod(_main.main)
+    def __call__(self):
+        return 42
 
-main = _CallableMainModule('ops.main', _main.__doc__)
+main = _CallableMainModule("ops.main", "some doc")
 
-__all__ = ['main']
+__all__ = ["main", "_main"]
