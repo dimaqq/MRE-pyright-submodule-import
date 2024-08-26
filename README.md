@@ -28,3 +28,5 @@ All three invocations styles work correctly at run time.
 Pyright thinks differently, it gathers that `ops.main` is:
 - a submodule if imported as `ops.main`
 - a callable if `ops` is imported and `main` attribute is resolved
+
+Pyright sees `sys.modules["ops.main"]()` while the runtime uses `sys.module["ops"].main()`.
