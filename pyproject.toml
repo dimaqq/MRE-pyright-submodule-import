@@ -8,7 +8,7 @@ classifiers = ["Programming Language :: Python :: 3"]
 version = "0.0.1b1"
 
 [tool.pyright]
-include = ["ops/*.py", "ops/_private/*.py", "test/*.py", "test/charms/*/src/*.py"]
+include = ["ops/*.py", "nops/*.py", "*.py"]
 pythonVersion = "3.12"
 pythonPlatform = "All"
 typeCheckingMode = "strict"
